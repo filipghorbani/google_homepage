@@ -2,53 +2,12 @@
 body {
   height: 100vh;
   font-size: small;
-  font-family: arial,sans-serif;
+  font-family: arial, sans-serif;
 }
 nav {
   width: 100%;
   display: flex;
   justify-content: flex-end;
-}
-main {
-  padding-top: 15vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.search-bar {
-  margin-top: 2em;
-  position: relative;
-}
-.search {
-  width: 80vw;
-  max-width: 550px;
-  height: 2.1em;
-  border-radius: 200px;
-  border: 1px rgba(0, 0, 0, 0.15) solid;
-  padding: 5px 5px 5px 40px;
-}
-
-.search:hover {
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.search-logo {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  top: 14px;
-  left: 15px;
-  opacity: 0.4;
-}
-
-.keyboard-logo {
-  position: absolute;
-  width: 20px;
-  height: 25px;
-  top: 9px;
-  right: 15px;
-  opacity: 0.5;
-  cursor: pointer;
 }
 
 ul {
@@ -70,7 +29,8 @@ ul {
   opacity: 0.7;
 }
 
-.nav-logo:hover {
+.nav-logo:hover,
+.nav-logo:focus {
   opacity: 1;
 }
 
@@ -90,7 +50,113 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover,
+.a:focus {
   text-decoration: underline;
   opacity: 0.8;
+}
+
+main {
+  padding-top: 15vh;
+  height: 71vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo {
+  max-width: 100%;
+}
+.search-bar {
+  margin-top: 2em;
+  position: relative;
+  outline: none;
+}
+.search {
+  width: 80vw;
+  max-width: 420px;
+  height: 2.5em;
+  border-radius: 200px;
+  border: 1px rgba(0, 0, 0, 0.15) solid;
+  padding: 5px 5px 5px 40px;
+}
+
+.search-bar:hover .search,
+.search-bar:focus .search {
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.search-logo {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 16px;
+  left: 15px;
+  opacity: 0.4;
+}
+
+.keyboard-logo {
+  position: absolute;
+  width: 20px;
+  height: 25px;
+  top: 10px;
+  right: 15px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  margin-top: 2em;
+  gap: 1em;
+}
+
+.btn {
+  padding: 0.7em;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.55);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.btn:hover,
+.btn:focus {
+  color: black;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  height: 7vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+}
+
+footer ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px;
+}
+
+.left {
+  width: 400px;
+}
+
+:right {
+  width: 200px;
+}
+
+footer ul li a {
+  color: rgba(0, 0, 0, 0.55);
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+  opacity: 1;
 }
