@@ -1,2 +1,2 @@
 # Google Landing
-Recreating the landing page of google.com
+Recreating the home page of google.com
